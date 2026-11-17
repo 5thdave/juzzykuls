@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-NG">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== SEO: Core Meta Tags ===== -->
+    <meta name="description" content="{% block meta_description %}JUZZYKULS BUSINESS SOLUTION NIG. LTD. — Wholesale distribution of Coke, Fanta, Sprite, Pepsi, Maltina &amp; all major beverages. Serving retailers &amp; businesses across Nigeria.{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}wholesale drinks Nigeria, Juzzykuls, Coca-Cola distributor Nigeria, Fanta wholesale Nigeria, bulk beverages, Sprite wholesale, Pepsi distributor, Maltina wholesale, Bigi drinks, Predator energy drink, Fearless energy drink, 7Up wholesale{% endblock %}">
+    <meta name="author" content="JUZZYKULS BUSINESS SOLUTION NIG. LTD.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{% block canonical_url %}https://www.juzzykuls.com{% endblock %}">
+
+    <!-- ===== SEO: Open Graph / Social ===== -->
+    <meta property="og:title" content="{% block og_title %}JUZZYKULS BUSINESS SOLUTION NIG. LTD. — Wholesale Drinks Distributor Nigeria{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Leading wholesale distributor of Coke, Fanta, Sprite, Pepsi, Maltina &amp; all major beverage brands in Nigeria. Order in bulk today.{% endblock %}">
+    <meta property="og:image" content="{{ url_for('static', filename='images/logo.png', _external=True) }}">
+    <meta property="og:image:alt" content="JUZZYKULS BUSINESS SOLUTION NIG. LTD. logo">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_NG">
+    <meta property="og:site_name" content="JUZZYKULS BUSINESS SOLUTION NIG. LTD.">
+    <meta property="og:url" content="{% block og_url %}https://www.juzzykuls.com{% endblock %}">
+
+    <!-- ===== SEO: Twitter Card ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block tw_title %}JUZZYKULS | Wholesale Drinks Distributor Nigeria{% endblock %}">
+    <meta name="twitter:description" content="{% block tw_description %}Wholesale distribution of Coke, Fanta, Sprite, Pepsi &amp; major beverages across Nigeria. Bulk orders welcome.{% endblock %}">
+    <meta name="twitter:image" content="{{ url_for('static', filename='images/logo.png', _external=True) }}">
+
+    <!-- ===== SEO: Local Business Schema (JSON-LD) ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "JUZZYKULS BUSINESS SOLUTION NIG. LTD.",
+      "description": "Wholesale distribution of refreshing drinks including Coke, Fanta, Sprite, Pepsi, Maltina, Predator, Bigi, Fearless, 7Up and Teem across Nigeria.",
+      "url": "https://www.juzzykuls.com",
+      "logo": "{{ url_for('static', filename='images/logo.png', _external=True) }}",
+      "image": "{{ url_for('static', filename='images/logo.png', _external=True) }}",
+      "telephone": ["+2349163034645", "+2347037420887"],
+      "email": "Juzzykulsinfo@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Beside African Palace Hotel along Oba-ile, Akure",
+        "addressLocality": "Akure",
+        "addressRegion": "Ondo State",
+        "addressCountry": "NG"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 7.2571,
+        "longitude": 5.1927
+      },
+      "priceRange": "₦₦",
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "19:00" }
+      ],
+      "sameAs": [],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+2349163034645",
+        "contactType": "sales",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts: Montserrat, Oswald, Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..900;1,300..900&family=Oswald:wght@300..700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#00256C',
+                            royal: '#012E7F',
+                            darkNavy: '#021B4D',
+                            red: '#AB1F22',
+                            redHover: '#8E171A',
+                            yellow: '#FCE001',
+                            yellowHover: '#E5CB00',
+                            cyan: '#458CC4',
+                            ice: '#F3F7FA',
+                        },
+                        primary: {
+                            DEFAULT: '#00256C',
+                            dark: '#021B4D',
+                            light: '#E8F0FB',
+                        },
+                        accent: {
+                            DEFAULT: '#AB1F22',
+                            hover: '#8E171A',
+                            light: '#FDECEC',
+                        },
+                        highlight: {
+                            DEFAULT: '#FCE001',
+                            hover: '#E5CB00',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        oswald: ['Oswald', 'sans-serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        h1, h2 {
+            font-family: 'Oswald', sans-serif;
+        }
+        h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+    <title>{% block title %}JUZZYKULS BUSINESS SOLUTION NIG. LTD.{% endblock %}</title>
+</head>
+<body class="min-h-screen flex flex-col bg-[#F3F7FA] text-slate-800 font-poppins">
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="bg-white/95 backdrop-blur sticky top-0 z-50 shadow-sm border-b border-slate-200/80">
+        <div class="mx-auto max-w-6xl px-6 py-3 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="{{ url_for('home') }}" class="flex items-center gap-2 group">
+                <img src="{{ url_for('static', filename='images/logo.png') }}"
+                     alt="JUZZYKULS BUSINESS SOLUTION NIG. LTD."
+                     class="h-11 sm:h-13 w-auto object-contain transition-transform group-hover:scale-102">
+            </a>
+
+            <!-- Hamburger (mobile) -->
+            <button id="menu-btn" class="md:hidden text-[#00256C] focus:outline-none" aria-label="Toggle menu">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+
+            <!-- Desktop nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold font-montserrat">
+                <a href="{{ url_for('home') }}"    class="text-[#00256C] hover:text-[#AB1F22] transition-colors">Home</a>
+                <a href="{{ url_for('about') }}"   class="text-[#00256C] hover:text-[#AB1F22] transition-colors">About</a>
+                <a href="{{ url_for('contact') }}" class="text-[#00256C] hover:text-[#AB1F22] transition-colors">Contact</a>
+                <a href="https://wa.me/2349163034645?text=Hello%20Juzzykuls%2C%20I%20would%20like%20to%20make%20an%20order."
+                   target="_blank" rel="noopener noreferrer"
+                   class="bg-[#AB1F22] text-white hover:bg-[#8E171A] px-5 py-2 rounded-full shadow-sm hover:shadow transition-all">
+                    Order Wholesale
+                </a>
+            </nav>
+        </div>
+
+        <!-- Mobile nav dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 font-montserrat bg-white border-t border-slate-100">
+            <nav class="flex flex-col gap-3 text-sm font-semibold pt-4">
+                <a href="{{ url_for('home') }}"    class="text-[#00256C] hover:text-[#AB1F22] transition-colors">Home</a>
+                <a href="{{ url_for('about') }}"   class="text-[#00256C] hover:text-[#AB1F22] transition-colors">About</a>
+                <a href="{{ url_for('contact') }}" class="text-[#00256C] hover:text-[#AB1F22] transition-colors">Contact</a>
+                <a href="https://wa.me/2349163034645?text=Hello%20Juzzykuls%2C%20I%20would%20like%20to%20make%20an%20order."
+                   target="_blank" rel="noopener noreferrer"
+                   class="text-center bg-[#AB1F22] text-white hover:bg-[#8E171A] px-5 py-2.5 rounded-lg shadow-sm transition-all mt-2">
+                    Order Wholesale
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== PAGE CONTENT ===== -->
+    <main class="flex-1">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-[#00256C] text-white px-6 py-14 font-poppins border-t-4 border-[#AB1F22]">
+        <div class="mx-auto max-w-6xl grid gap-8 sm:grid-cols-3">
+            <div>
+                <div class="bg-white p-2.5 rounded-xl inline-block shadow-sm mb-4">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}"
+                         alt="JUZZYKULS BUSINESS SOLUTION NIG. LTD."
+                         class="h-10 w-auto object-contain">
+                </div>
+                <p class="text-blue-100 text-sm leading-relaxed">
+                    Wholesale distribution of refreshing drinks. Coke, Fanta, Sprite, Predator, Bigi, Maltina &amp; premium beverages across Lagos.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-[#FCE001] font-bold text-lg mb-3 font-montserrat uppercase tracking-wider">Quick Links</h3>
+                <ul class="text-blue-100 text-sm space-y-2 font-montserrat">
+                    <li><a href="{{ url_for('home') }}"    class="hover:text-[#FCE001] transition-colors">Home</a></li>
+                    <li><a href="{{ url_for('about') }}"   class="hover:text-[#FCE001] transition-colors">About Us</a></li>
+                    <li><a href="{{ url_for('contact') }}" class="hover:text-[#FCE001] transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-[#FCE001] font-bold text-lg mb-3 font-montserrat uppercase tracking-wider">Contact</h3>
+                <address class="text-blue-100 text-sm not-italic space-y-1">
+                    <p>Beside African Palace Hotel along Oba-ile, Akure</p>
+                    <p>Ondo State, Nigeria</p>
+                    <p class="mt-2">
+                        <a href="tel:+2349163034645" class="hover:text-[#FCE001] transition-colors font-montserrat block">+234 916 303 4645</a>
+                        <a href="tel:+2347037420887" class="hover:text-[#FCE001] transition-colors font-montserrat block">+234 703 742 0887</a>
+                    </p>
+                    <p>
+                        <a href="mailto:Juzzykulsinfo@gmail.com" class="hover:text-[#FCE001] transition-colors font-montserrat">Juzzykulsinfo@gmail.com</a>
+                    </p>
+                </address>
+            </div>
+        </div>
+        <div class="mt-10 border-t border-blue-900/60 pt-5 text-center text-blue-200/80 text-xs font-poppins">
+            &copy; 2026 JUZZYKULS BUSINESS SOLUTION NIG. LTD. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Mobile nav toggle script -->
+    <script>
+        const menuBtn  = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    </script>
+
+    <!-- Flowbite (carousel, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,248 @@
+{% extends "base.html" %}
+{% block title %}Home | JUZZYKULS | Wholesale Drinks Distributor Nigeria{% endblock %}
+{% block meta_description %}JUZZYKULS BUSINESS SOLUTION NIG. LTD. — Your trusted wholesale distributor of Coke, Fanta, Sprite, Pepsi, Maltina, Bigi, Predator &amp; all major beverages in Nigeria. Bulk orders available.{% endblock %}
+{% block meta_keywords %}wholesale drinks Nigeria, Juzzykuls, Coca-Cola distributor Nigeria, Fanta wholesale, Sprite bulk, Pepsi distributor, Maltina wholesale, Bigi drinks, Predator energy drink, 7Up wholesale{% endblock %}
+{% block canonical_url %}https://www.juzzykuls.com/{% endblock %}
+{% block og_title %}JUZZYKULS | Wholesale Drinks Distributor Nigeria{% endblock %}
+{% block og_description %}Leading wholesale distributor of Coke, Fanta, Sprite, Pepsi, Maltina &amp; all major beverages in Nigeria. Order in bulk today.{% endblock %}
+{% block og_url %}https://www.juzzykuls.com/{% endblock %}
+{% block tw_title %}JUZZYKULS | Wholesale Drinks Distributor Nigeria{% endblock %}
+{% block tw_description %}Leading wholesale distributor of Coke, Fanta, Sprite, Pepsi &amp; major beverages across Nigeria. Bulk orders welcome.{% endblock %}
+
+{% block content %}
+
+    <style>
+        .hero-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: hero-video-fade 18s infinite;
+        }
+
+        .hero-video:nth-of-type(2) { animation-delay: 6s; }
+        .hero-video:nth-of-type(3) { animation-delay: 12s; }
+
+        @keyframes hero-video-fade {
+            0%, 26% { opacity: 1; }
+            33%, 100% { opacity: 0; }
+        }
+    </style>
+
+    <!-- ===== HERO ===== -->
+    <section class="relative isolate flex min-h-[540px] items-center justify-center overflow-hidden bg-gradient-to-br from-[#00256C] via-[#021B4D] to-[#011438] text-center text-white py-16">
+        <div class="absolute inset-0 overflow-hidden">
+            <video class="hero-video" autoplay muted loop playsinline aria-label="Hero background video 1">
+                <source src="{{ url_for('static', filename='videos/video1.mp4') }}" type="video/mp4">
+            </video>
+            <video class="hero-video" autoplay muted loop playsinline aria-label="Hero background video 2">
+                <source src="{{ url_for('static', filename='videos/video2.mp4') }}" type="video/mp4">
+            </video>
+            <video class="hero-video" autoplay muted loop playsinline aria-label="Hero background video 3">
+                <source src="{{ url_for('static', filename='videos/video3.mp4') }}" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-[#001A45]/70"></div>
+        </div>
+
+        <!-- Subtle Water Splash Overlay Graphic -->
+        <div class="absolute -right-20 -bottom-20 w-96 h-96 opacity-15 rounded-full bg-[#458CC4] blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-20 -top-20 w-96 h-96 opacity-15 rounded-full bg-[#AB1F22] blur-3xl pointer-events-none"></div>
+
+        <div class="px-6 max-w-4xl mx-auto relative z-10">
+            <span class="inline-flex items-center gap-2 bg-[#AB1F22] text-white font-semibold uppercase tracking-widest text-xs px-4 py-1.5 rounded-full mb-4 font-montserrat shadow-sm">
+                ⭐ Wholesale Distribution
+            </span>
+            <h1 class="text-4xl md:text-6xl font-bold font-oswald uppercase tracking-wide leading-tight">
+                Wholesale Distribution of<br>
+                <span class="text-[#FCE001]">Refreshing Drinks</span>
+            </h1>
+            <p class="mt-4 text-lg md:text-xl text-blue-100 font-poppins max-w-2xl mx-auto">
+                Your direct source for Coke, Fanta, Sprite, Predator, Bigi, Maltina &amp; all leading non-alcoholic beverages at bulk wholesale rates.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4 justify-center">
+                <a href="{{ url_for('about') }}"
+                   class="bg-[#AB1F22] text-white font-semibold font-montserrat px-8 py-3.5 rounded-full hover:bg-[#8E171A] shadow-lg shadow-[#AB1F22]/30 transition-all">
+                    About Our Business
+                </a>
+                <a href="{{ url_for('contact') }}"
+                   class="border-2 border-[#FCE001] text-[#FCE001] font-semibold font-montserrat px-8 py-3.5 rounded-full hover:bg-[#FCE001] hover:text-[#00256C] transition-all">
+                    Contact &amp; Orders
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WE DISTRIBUTE / FEATURED BRANDS ===== -->
+    <section class="py-16 px-6 bg-white">
+        <div class="mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <span class="text-[#AB1F22] font-semibold uppercase tracking-wider text-sm font-montserrat">Top Quality Brands</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#00256C] mt-1 font-oswald uppercase tracking-wide">Products We Distribute</h2>
+                <div class="w-16 h-1 bg-[#AB1F22] mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <!-- Distribution Showcase Banner Card -->
+            <div class="bg-gradient-to-r from-blue-50 to-slate-50 border border-blue-100 rounded-3xl p-6 md:p-8 shadow-sm mb-10">
+                <div class="grid md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-5">
+                        <span class="inline-block bg-[#00256C] text-white text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full mb-3 font-montserrat">
+                            Official Beverage Portfolio
+                        </span>
+                        <h3 class="text-2xl font-bold text-[#00256C] mb-3 font-oswald uppercase">All Major Drinks in Bulk</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4 font-poppins">
+                            We supply supermarkets, event planners, restaurants, convenience stores, and individual bulk buyers with verified direct-from-factory freshness.
+                        </p>
+                        <div class="grid grid-cols-2 gap-2 text-sm font-montserrat font-semibold text-slate-700">
+                            <div class="flex items-center gap-2"><span class="text-[#AB1F22]">✔</span> Coke</div>
+                            <div class="flex items-center gap-2"><span class="text-[#AB1F22]">✔</span> Fanta</div>
+                            <div class="flex items-center gap-2"><span class="text-[#AB1F22]">✔</span> Sprite</div>
+                            <div class="flex items-center gap-2"><span class="text-[#AB1F22]">✔</span> Predator</div>
+                            <div class="flex items-center gap-2"><span class="text-[#AB1F22]">✔</span> Bigi</div>
+                            <div class="flex items-center gap-2"><span class="text-[#AB1F22]">✔</span> Fearless</div>
+                            <div class="flex items-center gap-2"><span class="text-[#AB1F22]">✔</span> Pepsi</div>
+                            <div class="flex items-center gap-2"><span class="text-[#AB1F22]">✔</span> 7Up</div>
+                            <div class="flex items-center gap-2"><span class="text-[#AB1F22]">✔</span> Teem</div>
+                            <div class="flex items-center gap-2"><span class="text-[#AB1F22]">✔</span> Maltina</div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-7 flex justify-center">
+                        <img src="{{ url_for('static', filename='images/WhatsApp Image 2026-11-17 at 4.39.54 PM.jpeg') }}"
+                             alt="Juzzykuls Bottled Drinks Portfolio"
+                             class="rounded-2xl shadow-md max-h-72 w-auto object-cover border border-slate-100">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brand Logos / Badges Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+                <div class="flex min-h-20 items-center justify-center rounded-xl border border-slate-200 bg-[#F3F7FA] px-3 text-2xl font-black italic text-[#AB1F22] shadow-xs">Coca-Cola</div>
+                <div class="flex min-h-20 items-center justify-center rounded-xl border border-slate-200 bg-[#F3F7FA] px-3 text-3xl font-black italic text-orange-500 shadow-xs">Fanta</div>
+                <div class="flex min-h-20 items-center justify-center rounded-xl border border-slate-200 bg-[#F3F7FA] px-3 text-3xl font-black italic text-green-600 shadow-xs">Sprite</div>
+                <div class="flex min-h-20 items-center justify-center rounded-xl border border-slate-200 bg-[#F3F7FA] px-3 text-2xl font-black uppercase italic text-lime-600 shadow-xs">Predator</div>
+                <div class="flex min-h-20 items-center justify-center rounded-xl border border-slate-200 bg-[#F3F7FA] px-3 text-2xl font-black uppercase tracking-wide text-[#00256C] shadow-xs">Bigi</div>
+                <div class="flex min-h-20 items-center justify-center rounded-xl border border-slate-200 bg-[#F3F7FA] px-3 text-3xl font-black italic text-blue-700 shadow-xs">Pepsi</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY CAROUSEL ===== -->
+    <section class="bg-gradient-to-b from-[#F3F7FA] to-slate-100 py-16 px-6">
+        <div class="mx-auto max-w-4xl">
+            <div class="text-center mb-8">
+                <span class="text-[#AB1F22] font-semibold uppercase tracking-wider text-sm font-montserrat">Depot Showcase</span>
+                <h2 class="text-3xl font-bold text-[#00256C] mt-1 font-oswald uppercase tracking-wide">Our Inventory &amp; Distribution</h2>
+                <p class="text-slate-500 font-poppins text-sm mt-1">A glimpse of what awaits you at Juzzykuls Business Solution</p>
+            </div>
+
+            <div id="gallery" class="relative w-full" data-carousel="slide">
+                <div class="relative h-64 overflow-hidden rounded-2xl md:h-96 shadow-md border border-slate-200 bg-white">
+                    <!-- Item 1 (active) -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="{{ url_for('static', filename='images/IMG_20261117_085937_175.jpg.jpeg') }}"
+                             class="absolute block h-full w-full object-cover" alt="Bulk beverage stock inventory 1">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="{{ url_for('static', filename='images/IMG_20261117_090146_803.jpg.jpeg') }}"
+                             class="absolute block h-full w-full object-cover" alt="Bulk beverage stock inventory 2">
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="{{ url_for('static', filename='images/IMG_20261117_085948_629.jpg.jpeg') }}"
+                             class="absolute block h-full w-full object-cover" alt="Bulk beverage stock inventory 3">
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="{{ url_for('static', filename='images/pic3.jpeg') }}"
+                             class="absolute block h-full w-full object-cover" alt="Bulk beverage stock inventory 4">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="{{ url_for('static', filename='images/WhatsApp Image 2026-11-17 at 4.40.18 PM.jpeg') }}"
+                             class="absolute block h-full w-full object-cover" alt="Bulk beverage stock inventory 4">
+                    </div>
+                </div>
+
+                <!-- Prev button -->
+                <button type="button"
+                        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-prev>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#00256C]/60 group-hover:bg-[#00256C] text-white transition">
+                        <svg class="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+
+                <!-- Next button -->
+                <button type="button"
+                        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-next>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#00256C]/60 group-hover:bg-[#00256C] text-white transition">
+                        <svg class="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="py-16 px-6 bg-white">
+        <div class="mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <span class="text-[#AB1F22] font-semibold uppercase tracking-wider text-sm font-montserrat">The Juzzykuls Advantage</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#00256C] mt-1 font-oswald uppercase tracking-wide">Why Partner With Us?</h2>
+                <div class="w-16 h-1 bg-[#AB1F22] mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-2xl bg-[#F3F7FA] border border-slate-100 hover:border-blue-200 transition-all shadow-xs">
+                    <div class="w-12 h-1 bg-[#00256C] mx-auto mb-4 rounded-full"></div>
+                    <h3 class="text-xl font-bold mb-2 text-[#00256C] font-montserrat">Direct Wholesale Pricing</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed font-poppins">
+                        Highly competitive bulk pricing designed to give retailers and businesses maximum profit margins.
+                    </p>
+                </div>
+                <div class="text-center p-6 rounded-2xl bg-[#F3F7FA] border border-slate-100 hover:border-red-200 transition-all shadow-xs">
+                    <div class="w-12 h-1 bg-[#AB1F22] mx-auto mb-4 rounded-full"></div>
+                    <h3 class="text-xl font-bold mb-2 text-[#00256C] font-montserrat">Reliable Bulk Delivery</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed font-poppins">
+                        Fast dispatch across Lagos and surrounding areas. Dependable order turnaround times.
+                    </p>
+                </div>
+                <div class="text-center p-6 rounded-2xl bg-[#F3F7FA] border border-slate-100 hover:border-yellow-200 transition-all shadow-xs">
+                    <div class="w-12 h-1 bg-[#FCE001] mx-auto mb-4 rounded-full"></div>
+                    <h3 class="text-xl font-bold mb-2 text-[#00256C] font-montserrat">Guaranteed Fresh Stocks</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed font-poppins">
+                        100% genuine factory-sealed crates and packs with long shelf-life guarantee.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="bg-gradient-to-r from-[#00256C] via-[#021B4D] to-[#00256C] py-14 px-6 text-center text-white border-y-4 border-[#AB1F22]">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-2 font-oswald uppercase tracking-wide">
+            Ready to Place a Bulk Order?
+        </h2>
+        <p class="text-[#FCE001] mb-6 text-lg font-poppins font-medium">
+            Contact Juzzykuls Business Solution Nig. Ltd. today for current wholesale rate sheets.
+        </p>
+        <a href="https://wa.me/2349163034645?text=Hello%20Juzzykuls%20Business%20Solution%2C%20I%20would%20like%20to%20place%20a%20wholesale%20drinks%20order."
+           target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-[#AB1F22] text-white font-semibold font-montserrat px-10 py-3.5 rounded-full hover:bg-[#8E171A] transition-all shadow-lg hover:shadow-xl">
+            <!-- WhatsApp icon -->
+            <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Connect on WhatsApp
+        </a>
+    </section>
+
+{% endblock %}
