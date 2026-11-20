@@ -100,7 +100,7 @@ def robots():
         "User-agent: *",
         "Allow: /",
         "",
-        "Sitemap: https://juzzykuls.com.ng.ng/sitemap.xml"
+        "Sitemap: https://juzzykuls.com.ng/sitemap.xml"
     ]
     return Response("\n".join(lines), mimetype="text/plain")
 
@@ -108,7 +108,7 @@ def robots():
 # ===== SEO: sitemap.xml =====
 @app.route('/sitemap.xml')
 def sitemap():
-    base = "https://juzzykuls.com.ng.ng"
+    base = "https://juzzykuls.com.ng"
     today = datetime.utcnow().strftime("%Y-%m-%d")
     pages = [
         {"loc": f"{base}/",        "priority": "1.0", "changefreq": "weekly"},
